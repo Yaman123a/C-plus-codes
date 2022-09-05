@@ -1,0 +1,64 @@
+//Transpose of matrix
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+  int a[3][3],b[3][3],c[3][3];
+  int i,j;
+  clrscr();
+  cout << "\nEnter 9 integers to A matrix:";
+  for(i=0;i<3;i++)
+  {
+	for(j=0;j<3;j++)
+	{
+	cin>>a[i][j];
+	}
+  }
+  cout << "\nEnter 9 integers to B matrix:";
+  for(i=0;i<3;i++)
+  {
+	for(j=0;j<3;j++)
+	{
+	cin>>b[i][j];
+	}
+  }
+
+  cout <<"\nElements of A matrix are :"<< endl;
+  for(i=0;i<3;i++)
+  {
+	for(j=0;j<3;j++)
+	{
+	cout<<a[i][j]<<" ";
+	}
+	cout<<"\n";
+  }
+  cout <<"\nElements of B matrix are :"<< endl;
+  for(i=0;i<3;i++)
+  {
+	for(j=0;j<3;j++)
+	{
+	cout<<b[i][j]<<" ";
+	}
+	cout<<"\n";
+  }
+  for(i=0;i<3;i++)
+  {
+	for(j=0;j<3;j++)
+	{
+	    c[i][j]=a[i][j]+b[i][j];
+	}
+
+  }
+  cout<<"\n\nThe resultant matrix is:\n";
+  for(i=0;i<3;i++)
+  {
+	for(j=0;j<3;j++)
+	{
+	    cout<<c[i][j]<<" ";
+	}
+
+	cout<<"\n";
+  }
+
+  getch();
+}
