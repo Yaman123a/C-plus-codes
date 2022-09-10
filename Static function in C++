@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+class test
+{
+ static int count;
+ int object_no;
+ public:
+ void getobject()
+ {
+  object_no=++count;
+ }
+ void showobject()
+ {
+  cout<<"\nObject no="<<object_no;
+ }
+ static void showcount()
+ {
+  cout<<"\nCount="<<count;
+ }
+};
+int test::count;
+void main()
+{
+ clrscr();
+ test T1,T2,T3;;
+ T1.getobject();    //object_no=1
+ T2.getobject();     //objectno=2
+ test::showcount();    //count=2
+ T3.getobject();       //object_no=3
+ test::showcount();    // count=3
+ T1.showobject();          //1
+ T2.showobject();          //2
+ T3.showobject();          //3
+ getch();
+}
